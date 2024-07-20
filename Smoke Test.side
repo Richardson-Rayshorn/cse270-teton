@@ -1,0 +1,21 @@
+{
+  "id": "6051c6db-3d4b-4402-aa4f-63fab931aea6",
+  "version": "2.0",
+  "name": "Smoke Test",
+  "url": "",
+  "tests": [{
+    "id": "21ec6e5f-7f3b-4c97-9b46-fa3080f3427d",
+    "name": "Home Page 1",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "85b43177-a190-4b20-904d-9e4249083522",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["21ec6e5f-7f3b-4c97-9b46-fa3080f3427d"]
+  }],
+  "urls": [],
+  "plugins": []
+}
