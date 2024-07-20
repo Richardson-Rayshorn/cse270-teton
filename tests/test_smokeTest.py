@@ -22,7 +22,7 @@ class TestSmokeTest():
     self.driver.quit()
   
   def test_homePage(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/index.html")
+    self.driver.get("https://richardson-rayshorn.github.io/cse270-teton/index.html")
     self.driver.set_window_size(1296, 688)
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-logo img")
     assert len(elements) > 0
@@ -46,10 +46,10 @@ class TestSmokeTest():
     self.driver.find_element(By.LINK_TEXT, "Join Us").click()
     self.driver.find_element(By.CSS_SELECTOR, ".join-wizard-main").click()
     self.vars["theurl"] = self.driver.execute_script("return document.URL;")
-    assert(self.vars["theurl"] == "http://127.0.0.1:5500/cse270-teton/teton/1.6/join.html")
+    assert(self.vars["theurl"] == "https://richardson-rayshorn.github.io/cse270-teton/join.html")
   
   def test_joinPage(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/join.html")
+    self.driver.get("https://richardson-rayshorn.github.io/cse270-teton/join.html")
     self.driver.set_window_size(1296, 688)
     elements = self.driver.find_elements(By.NAME, "fname")
     assert len(elements) > 0
@@ -66,7 +66,7 @@ class TestSmokeTest():
     self.driver.find_element(By.NAME, "email").send_keys("rayshorn@eknotec.co")
   
   def test_directoryPage(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/directory.html")
+    self.driver.get("https://richardson-rayshorn.github.io/cse270-teton/directory.html")
     self.driver.set_window_size(1296, 688)
     self.driver.find_element(By.ID, "directory-grid").click()
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
@@ -74,7 +74,7 @@ class TestSmokeTest():
     assert self.driver.find_element(By.CSS_SELECTOR, ".gold-member:nth-child(9) > p:nth-child(2)").text == "Teton Turf and Tree"
   
   def test_adminPage(self):
-    self.driver.get("http://127.0.0.1:5500/cse270-teton/teton/1.6/admin.html")
+    self.driver.get("https://richardson-rayshorn.github.io/cse270-teton/admin.html")
     self.driver.set_window_size(1296, 688)
     elements = self.driver.find_elements(By.ID, "username")
     assert len(elements) > 0
